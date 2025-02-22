@@ -1,0 +1,100 @@
+{
+	"info": {
+		"_postman_id": "be28f92a-51fe-4c15-b909-32cc06e11c95",
+		"name": "Jokes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42542996"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/v1/jokes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"setup\": \"What do you call a fake noodle?\",\r\n        \"punchline\": \"An impasta.\",\r\n        \"category\": \"puns\",\r\n        \"rating\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/jokes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"jokes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/v1/jokes/?category=programming",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"setup\": \"Why did the chicken join a band?\",\r\n    \"punchline\": \"Because it had the drumsticks!\",\r\n    \"category\": \"general\",\r\n    \"rating\": 4\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/v1/jokes/?category=programming",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"v1",
+						"jokes",
+						""
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "programming"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
